@@ -1,0 +1,71 @@
+1. Відкріваємо GoogleHrome
+2. В адресну строку пишемо : aboute:blank
+3. ctrl+Schift+i
+
+//////////////////////////////////////////////////////////////////
+var anna={name:"Anna", age:11, luckyNumbers:[2,4,8,16]};
+var dave={name:"Dave", age:5, luckyNumbers:[3,9,40]};
+var kate={name:"Kate", age:9, luckyNumbers:[1,2,3]};
+
+var friends=[anna, dave, kate];
+friends[2].name;
+/////////////////////////////////////////////////////////////////
+
+var owedMoney={};
+owedMoney["jimmy"]=5;
+owedMoney["Anna"]=7;
+owedMoney["Jinen"];
+
+//////////////////////////////////////////////////////////////////
+
+
+
+var movies ={
+    "Finding Nemo" :{
+        releaseDate:2003,
+        duration:100,
+        actors:["Albert Brooks", "Ellen Degeneres", "Alexander Gould"],
+        format:"DVD"
+    },
+    "Star Wars : Episode VI Return of Jedi " :{
+        releaseDate:1983,
+        duration:134,
+        actors:["Mark Hammll", "Harrison Ford", "Carrie Fisher"],
+        format:"DVD"
+    },
+    "Harry Potter and Goblet of Fire" :{
+        releaseDate:2005,
+        duration:157,
+        actors:["Daniel Radcliffe", "Emma Watson", "Rupert Grint"],
+        format:"Blu-ray"
+    },
+};
+
+var cars={
+    releaseDate:2006,
+    duration:117,
+    actors:["Owen Wilson", "Bonnie Hunt", "Paul Newman"],
+    format:"Blu-ray"
+};
+movies["Cars"]=cars;
+
+////////////////////////////////////////////////////////////////////////
+scores.Nataliya+=2;
+scores.Marya+=2;
+scores.Anna+=2;
+scores.Volodymyr+=3;
+scores;
+////////////////////////////////////////////////////////////////////////
+
+var myCrazyObject={
+    "name": "A ridiculous object",
+    "some array": [7,9,{pursope: "confusion", number:123},3.3 ],
+    "random animal":"Banana Shark"
+};
+myCrazyObject["some array"][2]["number"];
+
+123
+
+////////////////////////////////////////////////////////////////////////////
+
+
