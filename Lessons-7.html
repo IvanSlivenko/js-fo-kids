@@ -6,6 +6,7 @@
     <title>Lessons-7</title>
 </head>
 <body>
+    <h1>Поле чудес</h1>
     
 
     <script>
@@ -39,7 +40,7 @@ for(var i=0; i < word.length; i++){
     answerArray[i]="_";
 };
 
-remainingLetters=word.length;
+var remainingLetters=word.length;
 
 while (remainingLetters > 0)
 {
@@ -53,22 +54,25 @@ while (remainingLetters > 0)
         alert("Please enter a single letter");
     }else{
       
+        var resultRaund=false;
         for(var j=0; j < word.length; j++){
             if(word[j]===guess){
+                resultRaund=true;
                 answerArray[j]=guess;
                 remainingLetters--;
+                
             } 
-            // else if(! word[j]===guess){
-            //     alert(" The letter is not correct,  Lets Go");
-            //     break;
-            // }
-           
         }
+
+        if(!resultRaund===true){
+                    alert(" The letter is not correct,  Lets Go")
+                }
     }
 }
+// alert("Finish progress : "+answerArray.join(" "));
+// alert("Good job!  The answer was "+ word);
 
-// alert("Current progress = "+answerArray.join(" "));
-if (answerArray === word){
+if (remainingLetters === 0){
     alert("Good job!  The answer was "+ word);
 }
 
