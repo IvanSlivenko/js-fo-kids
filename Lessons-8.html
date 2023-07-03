@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons-8</title>
+</head>
+<body>
+
+    <script>
+var sayHelloTo=function(Name){
+    console.log("Hello   " + Name + "!");
+}
+// sayHelloTo("Ivan");
+
+//////////////////////////////////////////
+
+var drawCats=function(howManyTimes){
+    for(var i=0; i<howManyTimes;i++){
+        console.log(i+". =^^=");
+    }
+}
+
+// drawCats(10);
+
+///////////////////////////////////////////////////
+
+var printMultipleTimes = function(howManyTimes,whatToDraw){
+    for(var i=0; i<howManyTimes;i++){
+        console.log(i+" "+ whatToDraw);
+    }
+}
+
+// printMultipleTimes(5,"test");
+
+///////////////////////////////////////////////////////
+var double=function(number){
+    var result=number*2;
+    console.log("number :",number ," result :",result );
+    return result;
+}
+// double(6);
+// double(5) + double(6)
+//double(double(2))
+// console.log(result);
+
+///////////////////////////////////////////////////////
+randomWords=[
+    "Planet",
+    "Worm",
+    "Flower",
+    "Computer"
+]
+
+
+// randomWords[Math.floor(Math.random()*randomWords.length)];
+// console.log(randomWords);
+
+var pickRandomWord=function(words){
+    var word=words[Math.floor(Math.random()*words.length)];
+    console.log(word);
+    return word;
+};
+
+pickRandomWord(randomWords);
+
+
+
+
+    </script>
+    
+</body>
+</html>
