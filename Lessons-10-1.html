@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons-10</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script>
+ var timeUp=()=>{
+    alert("Time`s up!")
+ }
+
+//  var timeautId=setTimeout(timeUp,4000);
+//  console.log(timeautId);
+
+/////////////////////////////////////////////////////
+// var doHpmeWorkAlarm=()=>{
+//     alert("Hey! You need ton do your homework");
+// };
+
+//  var timeautTwoId=setTimeout(doHpmeWorkAlarm,6000);
+
+//  clearTimeout(timeautTwoId);
+ 
+//////////////////////////////////////////////////
+var counter =1;
+
+console.log("Start");
+
+var max = prompt("max ?")
+
+var printMessage=()=>{
+        
+    console.log("You have been staring at your console for "+ counter +" second");
+    counter++;
+
+if(counter === Number(max)+1){
+   clearInterval(intervalId); 
+   console.log("Finish");
+}
+}
+
+
+var intervalId=setInterval(printMessage,1000);
+
+
+
+
+    </script>
+    
+</body>
+</html>
