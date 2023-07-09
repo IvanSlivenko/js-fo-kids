@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>requst-2</title>
+</head>
+<body>
+     <h1 id="heading">Hello world!</h1>
+
+     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+     <script>
+    
+        var direction='right';
+        var offset=0;
+
+        $("#heading").offset({
+            left: offset,
+            top: offset
+        });
+
+        var moveHeading=()=>{
+            if(direction ==='right'){
+                $("#heading").text("1 up change of 'right'  => left: offset++");
+                $("#heading").offset({left: offset});
+                offset++;
+                
+                if(offset > 200){
+                    offset=0;
+                    direction='down';
+                   
+                }
+            } else if(direction ==='down'){
+                $("#heading").text("2  right change  of 'down' => top: offset++");
+                $("#heading").offset({top: offset});
+                offset++;
+              
+                if(offset > 200){
+                    offset=200;
+                    direction='left';
+                    
+                }
+                
+            } else if(direction ==='left'){
+                    $("#heading").text("3 down change of 'left' => left: offset--");
+                    $("#heading").offset({left: offset});
+                    offset--;
+                    
+                    if(offset < 0){
+                        offset=200;
+                        direction='up';
+                       
+                    }
+                    
+            }
+            else if(direction ==='up'){
+                    $("#heading").text("4 left change of 'up' => top: offset-- ");
+                    $("#heading").offset({top: offset});
+                    offset--;
+                    
+                    if(offset < 0){
+                        offset=0;
+                        direction='right';
+                       
+                }                 
+            }
+        };
+        setInterval(moveHeading,30);
+
+     </script>
+    
+
+
+</body>
+</html>
