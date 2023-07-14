@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+</head>
+<body>
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+        var Car = function(x, y){
+            this.x = x;
+            this.y = y;
+        }
+
+        Car.prototype.draw=function(car){
+            var carHtml='<img src="./car.png">';
+           this.carElement=$(carHtml);
+
+            this.carElement.css({
+                // position: "absolute",
+                // left: this.x,
+                // top: this.y
+            });
+
+            console.log("car.x",this.x);
+            console.log("car.y",this.y);
+            $("body").append(this.carElement);
+        };
+
+        var tesla = new Car(20, 20);
+        var nissan = new Car(100, 200);
+
+        tesla.draw();
+        nissan.draw();
+
+
+
+
+    </script>
+
+    
+    
+</body>
+</html>
