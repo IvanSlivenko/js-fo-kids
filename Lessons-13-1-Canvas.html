@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons-13-Canvas</title>
+</head>
+<body>
+
+    <canvas id="canvas" width="200" height="200">
+
+
+    </canvas>
+    
+<script>
+
+    var canvas=document.getElementById("canvas");
+    var ctx= canvas.getContext("2d");
+    
+    ctx.fillStyle="#2F4F4F";
+    ctx.fillRect(0,0,40,120);
+    // ctx.StrokeRect(10,10,100,20);
+
+    ctx.fillStyle="#FF8C00";
+    ctx.fillRect(40,0,40,120);
+
+    ctx.fillStyle="#9932CC";
+    ctx.fillRect(80,0,40,120);
+
+    
+    // for(var i=0; i<8; i++){
+    //     ctx.fillStyle="#2F4F4F";
+    //     ctx.fillRect(i*20, i*20, 20, 20);
+
+    // };
+
+
+</script>
+
+</body>
+</html>

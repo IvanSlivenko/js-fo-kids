@@ -10,31 +10,77 @@
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 
     <script>
+        // add Constructor
         var Car = function(x, y){
             this.x = x;
             this.y = y;
+            // this.spead=15;
+            this.draw();
+           
         }
+        // console.log(Car.prototype);
 
         Car.prototype.draw=function(car){
-            var carHtml='<img src="./car.png">';
+           var carHtml='<img src="./car.png">';
            this.carElement=$(carHtml);
 
+           //style
             this.carElement.css({
-                // position: "absolute",
-                // left: this.x,
-                // top: this.y
+                position: "absolute",
+                left: this.x,
+                top: this.y,
+                
             });
-
-            console.log("car.x",this.x);
-            console.log("car.y",this.y);
+  
             $("body").append(this.carElement);
         };
 
-        var tesla = new Car(20, 20);
-        var nissan = new Car(100, 200);
+        Car.prototype.moviRight=function(distance){
+            this.x += distance;
+            this.carElement.css({
+                left:this.x,
+                top:this.y
+            });
+        };
 
-        tesla.draw();
-        nissan.draw();
+        Car.prototype.moveLeft=function(distance){
+            this.x -= distance;
+                    this.carElement.css({
+                        left:this.x,
+                        top:this.y
+                    });
+        };
+
+        Car.prototype.moveUp=function(distance){
+        this.y -= distance;
+                    this.carElement.css({
+                        left:this.x,
+                        top:this.y
+                    }); 
+        };
+
+        Car.prototype.moveDown=function(distance){
+           this.y += distance;
+                    this.carElement.css({
+                        left:this.x,
+                        top:this.y
+                    });  
+        };
+
+
+
+        var tesla = new Car(20, 20);
+        var nissan = new Car(200, 200);
+
+        // tesla.draw();
+        // nissan.draw();
+
+        setInterval(function(){
+            tesla.moviRight(Math.random()*5);
+            nissan.moviRight(Math.random()*5);
+        },30);
+
+
 
 
 
