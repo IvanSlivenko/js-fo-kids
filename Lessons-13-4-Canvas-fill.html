@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons-13-Canvas</title>
+</head>
+<body>
+
+    <canvas id="canvas" width="200" height="200">
+
+
+    </canvas>
+    
+<script>
+
+    var canvas=document.getElementById("canvas");
+    var ctx= canvas.getContext("2d");
+    
+ 
+
+
+    ctx.fillStyle="#8A2BE2";
+    ctx.lineWidth=4;
+    ctx.strokeRect(0,0,200,200);
+
+    ctx.beginPath();
+    // зазначаємо координати початку лінії
+    ctx.moveTo(100, 100);
+    // Малюємо лінію до координат х=100, у=60
+    ctx.lineTo(100, 60);
+    ctx.lineTo(130, 30);
+    ctx.lineTo(160, 60);
+    ctx.lineTo(160, 100);
+    ctx.lineTo(100, 100);
+  
+    
+    ctx.fill();
+
+
+
+
+
+</script>
+
+</body>
+</html>

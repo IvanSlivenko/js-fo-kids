@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons-13-Canvas</title>
+</head>
+<body>
+
+    <canvas id="canvas" width="200" height="200">
+
+
+    </canvas>
+    
+<script>
+
+    var canvas=document.getElementById("canvas");
+    var ctx= canvas.getContext("2d");
+    
+
+
+    ctx.strokeStyle="#FF8C00";
+    ctx.lineWidth=4;
+    ctx.strokeRect(0,0,200,200);
+    ctx.beginPath();
+    // зазначаємо координати початку лінії
+    ctx.moveTo(10, 10);
+    // Малюємо лінію до координат х=60, у=60
+    ctx.lineTo(60, 60);
+
+    // зазначаємо координати початку лінії
+    ctx.moveTo(60, 10);
+    // Малюємо лінію до координат х=10, у=60
+    ctx.lineTo(10, 60);
+   
+
+     // зазначаємо координати початку лінії
+    ctx.moveTo(65, 10);
+    // Малюємо лінію до координат х=120, у=60
+    ctx.lineTo(120, 60);
+
+     // зазначаємо координати початку лінії
+    ctx.moveTo(65, 60);
+    // Малюємо лінію до координат х=10, у=60
+    ctx.lineTo(120, 10);
+
+
+
+    ctx.stroke();
+
+
+
+
+
+</script>
+
+</body>
+</html>

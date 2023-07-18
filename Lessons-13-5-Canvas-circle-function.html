@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons-13-Canvas</title>
+</head>
+<body>
+
+    <canvas id="canvas" width="300" height="300">
+
+
+    </canvas>
+    
+<script>
+
+    var canvas=document.getElementById("canvas");
+    var ctx= canvas.getContext("2d");
+    
+ var circle=function(x,y,radius){
+    ctx.beginPath();
+    ctx.arc(x,y,radius,0,Math.PI*2, false);
+    ctx.stroke();
+ };
+
+var xx=130;
+var yy=130;
+var zz= 15;
+
+ctx.lineWidth=5;
+
+
+    ctx.strokeStyle="#006400";
+    circle(xx, yy, zz+10);
+
+    ctx.strokeStyle="#FA8072";
+    circle(xx, yy, zz+30);
+
+    ctx.strokeStyle="#006400";
+    circle(xx, yy, zz+50);
+
+    ctx.strokeStyle="#FA8072";
+    circle(xx, yy, zz+70);
+
+    ctx.strokeStyle="#006400";
+    circle(xx, yy, zz+90);
+
+    ctx.strokeStyle="#FA8072";
+    circle(xx, yy, zz+110);
+    
+
+
+
+
+
+</script>
+
+</body>
+</html>
