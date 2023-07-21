@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons-14</title>
+</head>
+<body>
+
+    <canvas id="canvas" width="200" height="200"></canvas>
+    
+    <script>
+
+    var canvas=document.getElementById("canvas");
+    var ctx =canvas.getContext("2d");
+
+    
+
+    // console.log(canvas);
+
+    var position=0;
+    var size=0;
+
+    // setInterval(function(){
+    //     ctx.clearRect(0,0,200,200);
+    //     ctx.strokeRect(0,0,200,200);
+    //     ctx.fillRect(position, 0,size,size);
+
+    //     position++;
+    //     size++;
+    //     if(position>200){
+    //         position=0;
+    //         size=0;
+    //     }
+    
+    // },30);
+
+    setInterval(function(){
+        
+        ctx.clearRect(0,0,200,200);
+        ctx.strokeRect(0,0,200,200);
+        ctx.fillRect(0, 0,size,size);
+
+        
+        size++;
+        if(size>200){
+            
+            size=0;
+        }
+
+        if(size<50){
+            
+          ctx.fillStyle="#FF8C00";  
+        } else if(size<80){
+            
+            ctx.fillStyle="#708090";
+        }
+        else if(size<120){
+            
+            ctx.fillStyle="#FF8C00";
+        }
+        else if(size<150){
+           
+            ctx.fillStyle="#708090";
+        }else if(size<200){
+            
+            ctx.fillStyle="#FF8C00";
+            
+        }
+    
+    },30);
+
+
+    </script>
+
+
+    
+</body>
+</html>
