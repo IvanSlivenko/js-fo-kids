@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson - 15 - 1</title>
+</head>
+<body>
+
+     <canvas id="canvas" width="400" height="400"></canvas>
+
+     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+     <script>
+       
+
+var keyNames={
+
+    32:"space",
+    37:"left",
+    38:"up",
+    39:"right",
+    40:"down",
+    16:"shift",
+    13:"enter",
+    18:"alt",
+    17:"ctrl"
+
+};
+
+ $("body").keydown(function(event){
+            console.log("event.keyCode ", event.keyCode);
+            console.log(keyNames[event.keyCode]);
+        })
+
+
+     </script>
+    
+
+
+</body>
+</html>
