@@ -125,7 +125,11 @@
 
     drawUnderscores(word.length);
 
-    while (remainingLetters > 0) { showPlayerProgress(answerArray); var guess = getGuess();
+    while (remainingLetters > 0) {
+      
+      showPlayerProgress(answerArray); 
+      
+      var guess = getGuess();
       if (guess === null) {
         break;
       } else if (guess.length !== 1) {
