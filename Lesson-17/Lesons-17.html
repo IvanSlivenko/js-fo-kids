@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leson - 17</title>
+</head>
+<body>
+     <canvas id="canvas" width="400" height="400"></canvas>
+    
+     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+<script>
+
+var canvas = document.getElementById("canvas");
+var ctx =  canvas.getContext("2d");
+
+var width = ctx.width;
+var height = ctx.height;
+
+var blockSize=10;
+
+var gameOver = ()=>{
+            // clearInterval(intervalId);
+            ctx.font = "60px Courier";
+            ctx.fillStyle="Black";
+            ctx.textAlign = "center";
+            ctx.textBaseLine="middle";
+            ctx.fillText("Game Over", width/2,height/2);
+        };
+
+var Block =()=>{
+    this.col=col;
+    this.row=row;
+}
+
+
+
+Block.prototype.drawSquare=(color)=>{
+    var x= this.col * blockSize;
+    var y= this.row  * blockSize;
+    ctx.fillstyle=color;
+    ctx.fillRect(x, y, blockSize, blockSize);
+}
+
+var circle= function(x, y, radius, fillCircle){
+    ctx.beginPath();
+    ctx.arc(x ,y, radius, 0, Math.PI*2, false);
+
+    if(fillCircle){
+        ctx.fillStyle="#8B4513";
+        ctx.fill();
+    }else{
+        ctx.strokeStyle="#FF8C00";
+        ctx.stroke();
+    }
+}
+
+Block.prototype.drawCircle=()=>{
+    var centerX = this.col * blockSize + blockSize / 2;
+    var centerY = this.row * blockSize + blockSize / 2;
+
+    ctx.fillstyle=color;
+    circle(centerX, centerY, blockSize / 2, true );
+
+}
+
+
+Block.prototype.egual=(otherBlock)=>{
+    return this.col === otherBlock.col && this.row === otherBlock.row 
+}
+
+var Snake=()=>{
+    this.segments=[
+        new Block(7,5),
+        new Block(6,5),
+        new Block(5,5),
+    ]
+        this.direction = "right";
+        this.nextDirection = "right";
+    
+}
+
+Snake.prototype.draw=()=>{
+    for( var i=0 ; i<this.segments.length; i++){
+        this.segments[i].drawSquare("Blue");
+    }
+}
+
+Snake.prototype.move=()=>{
+    var head=this.segments[0];
+    var newHead;
+
+    this.direction=this.nextDirection;
+
+    if (this.direction === "right"){
+        newHead = new Block(head.col +1, haed.row);
+    } else if(this.direction === "down"){
+        newHead = new Block(head.col, haed.row + 1);
+    } else if(this.direction === "left"){
+        newHead = new Block(head.col-1, haed.row);
+    } else if(this.direction === "up"){
+        newHead = new Block(head.col, haed.row -1);
+    }
+
+    if (this.checkCollision(newHead)){
+        gameOver();
+        return;
+    }
+
+    this.segments.inshift(newHead);
+
+    if (newHead.eguad(apple.position)){
+        score++;
+        apple.move(); 
+    }else {
+        this.segments.pop();
+    }
+
+};
+
+</script>
+
+
+    
+</body>
+</html>
